@@ -36,18 +36,15 @@
                         ✨ ¡Revoluciona tu restaurante con nuestro Menú Interactivo Digital! 📱🍴 <br>
                         ¿Te imaginas ofrecer a tus clientes una experiencia moderna, rápida y sin complicaciones?<br> Con nuestro Menú Interactivo Digital, tu restaurante no solo destacará, sino que también funcionará de manera más eficiente.
                     </p>
-                    <button class="audio-button" onclick="playAudio()">
+                    <button class="audio-button" onclick="playAudio('audio-proyecto')">
                         <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
                         Explícame el proyecto
                     </button>
                 </div>
                 <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
             </div>
-            <!-- Elemento de audio oculto -->
             <audio id="audio-proyecto" src="imagenes/audiorestaurante.mp4"></audio>
         </section>
-
-
 
         <section class="gallery">
             <div class="gallery-item">
@@ -56,7 +53,6 @@
                     <img src="imagenes/punto2.png" alt="Imagen 2">
                     <img src="imagenes/punto3.png" alt="Imagen 3">
                     <img src="imagenes/punto4.png" alt="Imagen 4">
-                    
                     <button class="prev" onclick="prevImage(this)">&#10094;</button>
                     <button class="next" onclick="nextImage(this)">&#10095;</button>
                 </div>
@@ -69,19 +65,15 @@
                         <br>
                     ¿Te imaginas un sistema que haga todo más sencillo para ti y para tus clientes? <br> Con nuestro Punto de Venta Digital, administrar y hacer crecer tu negocio será más fácil que nunca.
                     </p>
-                    <button class="audio-button" onclick="playAudio2()">
+                    <button class="audio-button" onclick="playAudio('audio-proyecto2')">
                         <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
                         Explícame el proyecto
                     </button>
                 </div>
                 <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
             </div>
-            <!-- Elemento de audio oculto -->
             <audio id="audio-proyecto2" src="imagenes/punto.mp4"></audio>
         </section>
-
-
-
 
         <section class="gallery">
             <div class="gallery-item">
@@ -89,11 +81,10 @@
                     <img src="imagenes/web1.png" alt="Imagen 1">
                     <img src="imagenes/web2.png" alt="Imagen 2">
                     <img src="imagenes/web3.png" alt="Imagen 3">
-                    
                     <button class="prev" onclick="prevImage(this)">&#10094;</button>
                     <button class="next" onclick="nextImage(this)">&#10095;</button>
                 </div>
-                <h2>Paginas Web</h2>
+                <h2>Páginas Web</h2>
                 <p>Precio: A partir de $3000</p>
 
                 <div class="texto-contenedor">
@@ -102,14 +93,13 @@
                         <br>
                         ¿Te imaginas destacar en el mundo digital con una página moderna, funcional y diseñada especialmente para ti? Con nuestro servicio de diseño web, tu negocio estará listo para atraer más clientes y crecer como nunca.
                     </p>
-                    <button class="audio-button" onclick="playAudio3()">
+                    <button class="audio-button" onclick="playAudio('audio-proyecto3')">
                         <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
                         Explícame el proyecto
                     </button>
                 </div>
                 <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
             </div>
-            <!-- Elemento de audio oculto -->
             <audio id="audio-proyecto3" src="imagenes/web.mp4"></audio>
         </section>
     </main>
@@ -166,52 +156,15 @@
             window.open(url, '_blank');
         }
 
-        function playAudio() {
-            const audio = document.getElementById('audio-proyecto');
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
             if (audio.paused) {
-                audio.play();
+                audio.play(); // Reproduce el audio
             } else {
-                audio.pause();
-                audio.currentTime = 0;
+                audio.pause(); // Pausa el audio
+                audio.currentTime = 0; // Reinicia el audio
             }
         }
     </script>
-
-    <script>
-        function playAudio() {
-    const audio = document.getElementById('audio-proyecto');
-    if (audio.paused) {
-        audio.play(); // Reproduce el audio
-    } else {
-        audio.pause(); // Pausa el audio
-        audio.currentTime = 0; // Reinicia el audio
-    }
-}
-    </script>
-
-<script>
-    function playAudio2() {
-const audio = document.getElementById('audio-proyecto2');
-if (audio.paused) {
-    audio.play(); // Reproduce el audio
-} else {
-    audio.pause(); // Pausa el audio
-    audio.currentTime = 0; // Reinicia el audio
-}
-}
-</script>
-
-<script>
-    function playAudio3() {
-const audio = document.getElementById('audio-proyecto3');
-if (audio.paused) {
-    audio.play(); // Reproduce el audio
-} else {
-    audio.pause(); // Pausa el audio
-    audio.currentTime = 0; // Reinicia el audio
-}
-}
-</script>
-
 </body>
 </html>
