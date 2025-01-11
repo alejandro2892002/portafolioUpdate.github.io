@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Update</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="presentacion">Bienvenidos a Update <br> <p class="sub">Conocé nuestro Catálogo</p></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="gallery-item">
+                <div class="carousel">
+                    <img src="/imagenes/restaurante1.png" alt="Imagen 1">
+                    <img src="/imagenes/restaurante2.png" alt="Imagen 2">
+                    <img src="/imagenes/restaurante3.png" alt="Imagen 3">
+                    <img src="/imagenes/restaurante4.png" alt="Imagen 4">
+                    <img src="/imagenes/restaurante5.png" alt="Imagen 5">
+                    <img src="/imagenes/restaurante6.png" alt="Imagen 6">
+                    <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                    <button class="next" onclick="nextImage(this)">&#10095;</button>
+                </div>
+                <h2>Menú Interactivo Digital</h2>
+                <p>Precio: $3500</p>
+
+                <div class="texto-contenedor">
+                    <p id="texto">Descripción: <br>
+                        ✨ ¡Revoluciona tu restaurante con nuestro Menú Interactivo Digital! 📱🍴 <br>
+                        ¿Te imaginas ofrecer a tus clientes una experiencia moderna, rápida y sin complicaciones?<br> Con nuestro Menú Interactivo Digital, tu restaurante no solo destacará, sino que también funcionará de manera más eficiente.
+                    </p>
+                    <button class="audio-button" onclick="playAudio()">
+                        <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
+                        Explícame el proyecto
+                    </button>
+                </div>
+                <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
+            </div>
+            <!-- Elemento de audio oculto -->
+            <audio id="audio-proyecto" src="imagenes/audiorestaurante.mp4"></audio>
+        </section>
+
+
+
+        <section class="gallery">
+            <div class="gallery-item">
+                <div class="carousel">
+                    <img src="/imagenes/punto1.png" alt="Imagen 1">
+                    <img src="/imagenes/punto2.png" alt="Imagen 2">
+                    <img src="/imagenes/punto3.png" alt="Imagen 3">
+                    <img src="/imagenes/punto4.png" alt="Imagen 4">
+                    
+                    <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                    <button class="next" onclick="nextImage(this)">&#10095;</button>
+                </div>
+                <h2>Punto de Venta</h2>
+                <p>Precio: $1500 Local / $2500 Global</p>
+
+                <div class="texto-contenedor">
+                    <p id="texto">Descripción: <br>
+                        ✨ ¡Transforma tu negocio con nuestro innovador Sistema de Punto de Venta Digital! 💻🛒
+                        <br>
+                    ¿Te imaginas un sistema que haga todo más sencillo para ti y para tus clientes? <br> Con nuestro Punto de Venta Digital, administrar y hacer crecer tu negocio será más fácil que nunca.
+                    </p>
+                    <button class="audio-button" onclick="playAudio2()">
+                        <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
+                        Explícame el proyecto
+                    </button>
+                </div>
+                <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
+            </div>
+            <!-- Elemento de audio oculto -->
+            <audio id="audio-proyecto2" src="imagenes/punto.mp4"></audio>
+        </section>
+
+
+
+
+        <section class="gallery">
+            <div class="gallery-item">
+                <div class="carousel">
+                    <img src="/imagenes/web1.png" alt="Imagen 1">
+                    <img src="/imagenes/web2.png" alt="Imagen 2">
+                    <img src="/imagenes/web3.png" alt="Imagen 3">
+                    
+                    <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                    <button class="next" onclick="nextImage(this)">&#10095;</button>
+                </div>
+                <h2>Paginas Web</h2>
+                <p>Precio: A partir de $3000</p>
+
+                <div class="texto-contenedor">
+                    <p id="texto">Descripción: <br>
+                        ✨ ¡Impulsa tu negocio con una Página Web a tu medida! 🌐💻
+                        <br>
+                        ¿Te imaginas destacar en el mundo digital con una página moderna, funcional y diseñada especialmente para ti? Con nuestro servicio de diseño web, tu negocio estará listo para atraer más clientes y crecer como nunca.
+                    </p>
+                    <button class="audio-button" onclick="playAudio3()">
+                        <img src="imagenes/icon.png" alt="Ícono de sonido" class="sound-icon">
+                        Explícame el proyecto
+                    </button>
+                </div>
+                <a href="#" class="btn" onclick="sendToWhatsApp(this)">SOLICITAR PRODUCTO</a>
+            </div>
+            <!-- Elemento de audio oculto -->
+            <audio id="audio-proyecto3" src="imagenes/web.mp4"></audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Update. Todos los derechos reservados.
+            <br>
+            WhatsApp: 5636312119
+        </p>
+    </footer>
+
+    <script>
+        const phoneNumber = '525526593673';
+
+        function prevImage(button) {
+            const carousel = button.parentNode;
+            const images = carousel.querySelectorAll('img');
+            let index = 0;
+
+            for (let i = 0; i < images.length; i++) {
+                if (images[i].style.display === 'block') {
+                    index = i;
+                    break;
+                }
+            }
+
+            images[index].style.display = 'none';
+            index = (index - 1 + images.length) % images.length;
+            images[index].style.display = 'block';
+        }
+
+        function nextImage(button) {
+            const carousel = button.parentNode;
+            const images = carousel.querySelectorAll('img');
+            let index = 0;
+
+            for (let i = 0; i < images.length; i++) {
+                if (images[i].style.display === 'block') {
+                    index = i;
+                    break;
+                }
+            }
+
+            images[index].style.display = 'none';
+            index = (index + 1) % images.length;
+            images[index].style.display = 'block';
+        }
+
+        function sendToWhatsApp(button) {
+            const galleryItem = button.parentNode;
+            const cabinName = galleryItem.querySelector('h2').innerText;
+            const message = `Hola, me interesa la ${cabinName}`;
+            const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        function playAudio() {
+            const audio = document.getElementById('audio-proyecto');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        }
+    </script>
+
+    <script>
+        function playAudio() {
+    const audio = document.getElementById('audio-proyecto');
+    if (audio.paused) {
+        audio.play(); // Reproduce el audio
+    } else {
+        audio.pause(); // Pausa el audio
+        audio.currentTime = 0; // Reinicia el audio
+    }
+}
+    </script>
+
+<script>
+    function playAudio2() {
+const audio = document.getElementById('audio-proyecto2');
+if (audio.paused) {
+    audio.play(); // Reproduce el audio
+} else {
+    audio.pause(); // Pausa el audio
+    audio.currentTime = 0; // Reinicia el audio
+}
+}
+</script>
+
+<script>
+    function playAudio3() {
+const audio = document.getElementById('audio-proyecto3');
+if (audio.paused) {
+    audio.play(); // Reproduce el audio
+} else {
+    audio.pause(); // Pausa el audio
+    audio.currentTime = 0; // Reinicia el audio
+}
+}
+</script>
+
+</body>
+</html>

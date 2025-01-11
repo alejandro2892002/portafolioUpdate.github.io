@@ -1,0 +1,172 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+header {
+    background: #000000;
+    color: white;
+    padding: 1rem;
+}
+
+.presentacion{
+    font-family: "Georgia", serif; /* Fuente serif para un toque más clásico */
+    font-size: 48px; /* Tamaño grande para destacar */
+    font-weight: bold; /* Negrita para hacerlo más impactante */
+    color: white; /* Texto blanco para contrastar con el fondo negro */
+    text-transform: uppercase; /* Convierte todo el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras para mayor claridad */
+    text-align: center; /* Centrado para un buen equilibrio visual */
+    margin: 30px 0; /* Espaciado adecuado alrededor del título */
+    line-height: 1.2; /* Mantiene la altura de línea cómoda */
+    text-shadow: 8px 3px 20px rgba(255, 215, 0, 1), 0px 0px 20px rgba(255, 215, 0, 0.8); /* Sombra dorada destacada */
+    background-color: black; /* Fondo negro */
+    padding: 10px; /* Espaciado alrededor del título para mayor impacto */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    background: #121212;
+}
+
+.gallery-item {
+    text-align: center;
+    flex: 1 1 45%;
+    margin: 1rem;
+    color: white;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    border-radius: 5px;
+}
+
+.carousel img {
+    width: auto;
+    height: 100%;
+    display: none;
+}
+
+.carousel img:first-child {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
+.texto-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* Botones */
+.audio-button, .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 1rem 0; /* Espaciado entre botones */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.audio-button:hover, .btn:hover {
+    background-color: #121212;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+
+.sound-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sub{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@media (max-width: 768px) {
+    .carousel{
+        height: 420px;
+
+        
+    }
+
+    .carousel button.prev {
+        left: 0px;
+    }
+    
+    .carousel button.next {
+        right: 0px;
+    }
+
+    .presentacion{
+        text-align: center;
+    }
+    
+}
