@@ -122,7 +122,7 @@
     </footer>
 
     <script>
-        const phoneNumber = '525526593673';
+        const phoneNumber = '525636312119';
 
         function prevImage(button) {
             const carousel = button.parentNode;
@@ -161,7 +161,7 @@
         function sendToWhatsApp(button) {
             const galleryItem = button.parentNode;
             const cabinName = galleryItem.querySelector('h2').innerText;
-            const message = `Hola, me interesa la ${cabinName}`;
+            const message = `Hola, me interesa ${cabinName}`;
             const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
